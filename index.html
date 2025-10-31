@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #productlist{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+  }
+  .card{
+    background-color: darkcyan;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .card img{
+    height: 30vh;
+    
+  }
+</style>
+<body>
+  
+
+
+<div id="productlist"></div>
+
+
+<script>
+fetch('https://fakestoreapi.com/products')
+  .then(response => response.json())
+  .then(data =>
+data.forEach(product => {
+  let products =document.getElementById('productlist');
+let card=document.createElement('div');
+card.classList.add('card')
+card.innerHTML=`
+<img src='${product.image}' alt='${product.title}'>
+<h3>${product.price}</h3>
+<p>${product.title}</p>
+`
+products.appendChild(card)
+})
+)
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="score" placeholder="Score likho" />
+    <button id="save">Save</button>
+    <button id="show">Show Saved</button>
+
+    <script>
+      document.getElementById("save").onclick = () => {
+        const s = document.getElementById("score").value;
+        localStorage.setItem("gameScore", s);
+        alert("Score saved!");
+      };
+      document.getElementById("show").onclick = () => {
+        alert("Saved score: " + localStorage.getItem("gameScore"));
+      };
+
+
+
+      
+    </script>
+  </body>
+</html>

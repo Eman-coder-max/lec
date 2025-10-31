@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    .box{
+        height: 30vh;
+        width: 30%;
+        background-color: brown;
+    }
+    .box:nth-child(odd){
+        background-color: chartreuse;
+    }
+    .box::before{
+        content: '❤️';
+    }
+    .box::after{
+        content: '---------------';
+    }
+    .box:last-child{
+        color: red;
+    }
+    .box:first-child{
+        color: brown;
+    }
+</style>
+<body>
+    <!-- pseudo classe: -->
+    <!-- pseudo elements :: -->
+<div class="flex">
+    <div class="box">
+        <h1>heading</h1>
+    </div>
+    <div class="box">
+        <h1>heading</h1>
+    </div>
+    <div class="box">
+        <h1>heading</h1>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

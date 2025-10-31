@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <title>Document</title>
+</head>
+<style>
+    .animation{
+        height: 30vh;
+        width: 30%;
+        background-color: brown;
+        animation-name:move ;
+        animation-duration: 2s;
+        position: relative;
+        /* animation-delay:2s ; */
+        /* animation-iteration-count: infinite; */
+        /* animation-fill-mode:forwards; */
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    @keyframes move {
+        from{
+            left: 0;
+        }
+        to{
+            left: 50%;
+background-color: blue;
+transform: scale(1.5);
+clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+        }
+
+    }
+.carousel-cell {
+  width: 100%;
+  height: 100vh;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+}
+</style>
+<body>
+    
+<div class="animation">
+</div>
+<div class="carousel" data-flickity='{ "groupCells": true }'>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+</div>
+
+
+
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+</body>
+</html>
